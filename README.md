@@ -1,20 +1,63 @@
-<<<<<<< HEAD
-# react-assignment-A00491215
-=======
-# React + Vite
+# React Assignment – About Me & My Town
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React app with two pages: **About Me** and **My Town**.
+It shows basic navigation, live weather data, and a temperature toggle.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## React Compiler
+* Built using **React (Vite)** and **React Router**.
+* Fetches weather from **OpenWeatherMap API**.
+* Displays different weather icons based on temperature.
+* Includes a “Change to °F” button for temperature toggle.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 3bcd1be (feat: Implementation of react project)
+1. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+2. Add your OpenWeather API key in a `.env` file:
+
+   ```
+   VITE_OPENWEATHER_KEY=your_api_key_here
+   ```
+
+3. Run the app
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open `http://localhost:5173`
+
+---
+
+##  Features
+
+* Two pages: **About Me** and **My Town**
+* Weather fetched from a valid API
+* Conditional weather icons (cold, mild, sunny)
+* °C/°F toggle button
+* Simple CSS styling and navigation
+
+
+## Deployment
+
+Build and deploy:
+
+```bash
+npm run build
+```
+
+
+
+---
+
+**Author:** Krushi Mistry
+Saint Mary’s University – MCDA Program
