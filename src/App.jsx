@@ -3,11 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import About from "./pages/About";
 import MyTown from "./pages/MyTown";
 
-/*
- Simple navbar + two routes:
- - "/" -> About
- - "/town" -> My Town
-*/
+
 export default function App() {
   return (
     <div className="app-shell">
