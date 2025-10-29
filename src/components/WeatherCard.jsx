@@ -3,15 +3,7 @@ import coldImg from "../assets/cold.png";
 import mildImg from "../assets/mild.png";
 import sunnyImg from "../assets/sunny.png";
 
-/*
- WeatherCard responsibilities:
-  - fetch weather from OpenWeatherMap for the provided city
-  - show temperature (°C or °F) with a toggle button
-  - show the correct weather image according to temperature:
-      <=10°C -> cold.png
-      11–19°C -> mild.png
-      >=20°C -> sunny.png
-*/
+
 
 function selectIconForTempC(tempC) {
   if (tempC <= 10) return coldImg;
@@ -20,7 +12,7 @@ function selectIconForTempC(tempC) {
 }
 
 export default function WeatherCard({ city = "Halifax,CA" }) {
-  const [tempC, setTempC] = useState(null); // temperature in Celsius
+  const [tempC, setTempC] = useState(null); 
   const [isCelsius, setIsCelsius] = useState(true);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -34,7 +26,7 @@ export default function WeatherCard({ city = "Halifax,CA" }) {
         if (!key) {
           throw new Error("Missing OpenWeatherMap API key. Add VITE_OPENWEATHER_KEY to .env");
         }
-        // fetch current weather in metric (Celsius)
+       
         const resp = await fetch(
           `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&appid=${key}`
         );
@@ -42,7 +34,7 @@ export default function WeatherCard({ city = "Halifax,CA" }) {
           throw new Error(`Weather fetch failed: ${resp.statusText}`);
         }
         const data = await resp.json();
-        // data.main.temp is in Celsius because of units=metric
+        
         if (data && data.main && typeof data.main.temp === "number") {
           setTempC(Number(data.main.temp.toFixed(1)));
         } else {
@@ -66,7 +58,7 @@ export default function WeatherCard({ city = "Halifax,CA" }) {
   function displayedTemp() {
     if (tempC == null) return "--";
     if (isCelsius) return `${tempC} °C`;
-    // convert to Fahrenheit
+   
     const f = (tempC * 9) / 5 + 32;
     return `${f.toFixed(1)} °F`;
   }

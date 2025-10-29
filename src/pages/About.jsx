@@ -1,9 +1,6 @@
 import React from "react";
 
-/*
- Simple About Me page.
- Keep content short and styled in styles.css
-*/
+
 export default function About() {
   return (
     <section className="card center-card">

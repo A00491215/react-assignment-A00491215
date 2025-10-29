@@ -1,9 +1,8 @@
-/* Basic, simple styling for beginner readability */
-/* Use system font for simplicity */
+
 :root {
   --card-bg: #ffffff;
   --muted: #555;
-  --accent: #0b7285; /* teal-ish */
+  --accent: #0b7285; 
 }
 
 * { box-sizing: border-box; }
@@ -39,7 +38,7 @@ nav .nav-link:hover { color: var(--accent); }
 
 .center-card { max-width: 720px; width: 100%; }
 
-/* Card style used for both pages */
+
 .card {
   background: var(--card-bg);
   border-radius: 6px;
@@ -73,7 +72,7 @@ h2 { margin: 2px 0; font-size: 22px; }
   margin-bottom: 6px;
 }
 
-/* Weather card */
+
 .weather-card {
   margin-top: 16px;
   padding: 12px;
